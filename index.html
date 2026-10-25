@@ -1,0 +1,957 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ghalda Catering Service & Wedding Package</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        sage: {
+                            50: '#f4f7f4',
+                            100: '#e3eae2',
+                            200: '#ca97c8',
+                            300: '#9cb59a',
+                            500: '#5c7859',
+                            600: '#4d6252',
+                            700: '#3c4e40',
+                            800: '#2d3a30',
+                            900: '#1e2720'
+                        },
+                        gold: {
+                            300: '#e2cc89',
+                            400: '#d4af37',
+                            500: '#c59b27',
+                            600: '#a37e1c',
+                            700: '#7a5d11'
+                        },
+                        cream: '#fcfbf7',
+                        sand: '#f5f0e6'
+                    },
+                    fontFamily: {
+                        serif: ['Playfair Display', 'serif'],
+                        sans: ['Plus Jakarta Sans', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .gold-gradient-text {
+            background: linear-gradient(135deg, #d4af37 0%, #f3e5ab 50%, #c59b27 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .hero-bg {
+            background: linear-gradient(180deg, rgba(30,39,32,0.82) 0%, rgba(30,39,32,0.92) 100%), url('https://images.unsplash.com/photo-1519225421980-715cb0215aed?auto=format&fit=crop&q=80&w=1920');
+            background-size: cover;
+            background-position: center;
+        }
+        .card-glass {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+        }
+    </style>
+</head>
+<body class="bg-cream font-sans text-gray-800 antialiased selection:bg-gold-400 selection:text-white">
+
+    <!-- Header / Navbar -->
+    <header class="sticky top-0 z-50 bg-sage-900/95 backdrop-blur-md border-b border-gold-400/20 text-white transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <a href="#" class="flex items-center gap-3 group">
+                <div class="w-10 h-10 rounded-full border border-gold-400/50 flex items-center justify-center bg-sage-800 text-gold-400 font-serif font-bold text-xl group-hover:border-gold-400 transition">G</div>
+                <div>
+                    <span class="font-serif text-2xl font-bold tracking-wide text-white block leading-none">Ghalda</span>
+                    <span class="text-[10px] tracking-[0.2em] text-gold-400 uppercase font-medium">Catering & Wedding</span>
+                </div>
+            </a>
+
+            <nav class="hidden md:flex items-center gap-8 text-sm font-medium">
+                <a href="#tentang" class="hover:text-gold-400 transition">Tentang Kami</a>
+                <a href="#paket" class="hover:text-gold-400 transition">Paket Pernikahan</a>
+                <a href="#prasmanan" class="hover:text-gold-400 transition">Menu Prasmanan</a>
+                <a href="#gubug" class="hover:text-gold-400 transition">Menu Gubug</a>
+                <a href="#kalkulator" class="hover:text-gold-400 transition">Kalkulator Biaya</a>
+                <a href="#kontak" class="hover:text-gold-400 transition">Kontak</a>
+            </nav>
+
+            <div class="flex items-center gap-3">
+                <a href="https://wa.me/6285715546706?text=Halo%20Ghalda%20Catering,%20saya%20ingin%20konsultasi%20paket%20pernikahan" target="_blank" class="bg-gradient-to-r from-gold-500 to-gold-400 text-sage-900 font-semibold px-5 py-2.5 rounded-full shadow-lg shadow-gold-500/10 hover:shadow-gold-500/20 hover:scale-105 transition duration-200 text-sm flex items-center gap-2">
+                    <i class="fab fa-whatsapp text-lg"></i>
+                    <span>Konsultasi Gratis</span>
+                </a>
+                <button id="menu-toggle" class="md:hidden text-2xl text-white focus:outline-none ml-2">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Navigation Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-sage-900 border-b border-gold-400/20 px-4 pt-2 pb-6 space-y-3 text-sm">
+            <a href="#tentang" class="block py-2 text-gray-200 hover:text-gold-400">Tentang Kami</a>
+            <a href="#paket" class="block py-2 text-gray-200 hover:text-gold-400">Paket Pernikahan</a>
+            <a href="#prasmanan" class="block py-2 text-gray-200 hover:text-gold-400">Menu Prasmanan</a>
+            <a href="#gubug" class="block py-2 text-gray-200 hover:text-gold-400">Menu Gubug</a>
+            <a href="#kalkulator" class="block py-2 text-gray-200 hover:text-gold-400">Kalkulator Biaya</a>
+            <a href="#kontak" class="block py-2 text-gray-200 hover:text-gold-400">Kontak</a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-bg text-white py-24 lg:py-36 relative overflow-hidden">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
+            <span class="inline-block px-4 py-1.5 rounded-full bg-gold-400/20 border border-gold-400/40 text-gold-300 font-medium text-xs tracking-widest uppercase mb-6">
+                Premium Catering & Wedding Services
+            </span>
+            <h1 class="font-serif text-4xl sm:text-6xl lg:text-7xl font-bold leading-tight mb-6">
+                Wujudkan Momen Istimewa Bersama <span class="gold-gradient-text italic font-normal">Ghalda Catering</span>
+            </h1>
+            <p class="text-base sm:text-lg text-gray-300 max-w-2xl mx-auto mb-10 leading-relaxed font-light">
+                Didedikasikan penuh untuk menciptakan pengalaman bersantap yang tak terlupakan dan dekorasi pernikahan mewah nan elegan sesuai impian Anda.
+            </p>
+
+            <div class="flex flex-col sm:flex-row justify-center items-center gap-4">
+                <a href="#paket" class="w-full sm:w-auto bg-gold-500 hover:bg-gold-400 text-sage-900 font-bold px-8 py-4 rounded-full transition duration-300 shadow-xl flex items-center justify-center gap-3">
+                    <span>Lihat Paket Pernikahan</span>
+                    <i class="fas fa-arrow-right text-xs"></i>
+                </a>
+                <a href="#kalkulator" class="w-full sm:w-auto border border-gold-400/50 hover:bg-gold-400/10 text-gold-300 font-semibold px-8 py-4 rounded-full transition duration-300 flex items-center justify-center gap-2">
+                    <i class="fas fa-calculator text-gold-400"></i>
+                    <span>Hitung Estimasi Biaya</span>
+                </a>
+            </div>
+
+            <!-- Stats/Badges -->
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6 mt-16 pt-12 border-t border-white/10 max-w-4xl mx-auto">
+                <div>
+                    <p class="font-serif text-3xl font-bold text-gold-400">100%</p>
+                    <p class="text-xs text-gray-400 uppercase tracking-wider mt-1">Halal & Higienis</p>
+                </div>
+                <div>
+                    <p class="font-serif text-3xl font-bold text-gold-400">300+</p>
+                    <p class="text-xs text-gray-400 uppercase tracking-wider mt-1">Porsi Hingga 2000 Pax</p>
+                </div>
+                <div>
+                    <p class="font-serif text-3xl font-bold text-gold-400">Full</p>
+                    <p class="text-xs text-gray-400 uppercase tracking-wider mt-1">Fasilitas All-In</p>
+                </div>
+                <div>
+                    <p class="font-serif text-3xl font-bold text-gold-400">Katering</p>
+                    <p class="text-xs text-gray-400 uppercase tracking-wider mt-1">Gedung & Rumah</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tentang Kami & Layanan -->
+    <section id="tentang" class="py-20 bg-cream">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                <div class="lg:col-span-5 space-y-6">
+                    <span class="text-gold-600 font-semibold text-xs uppercase tracking-widest block">Tentang Ghalda Catering</span>
+                    <h2 class="font-serif text-3xl sm:text-4xl font-bold text-sage-900 leading-snug">
+                        Pengalaman Bersantap Dan Pelayanan Momen Spesial Anda
+                    </h2>
+                    <p class="text-gray-600 leading-relaxed font-light">
+                        Ghalda Catering adalah layanan katering dan paket pernikahan yang didedikasikan penuh untuk menciptakan cita rasa autentik, dekorasi memukau, serta koordinasi acara yang mulus di wilayah Jakarta dan sekitarnya.
+                    </p>
+                    <div class="space-y-4 pt-2">
+                        <div class="flex items-start gap-4">
+                            <div class="w-10 h-10 rounded-lg bg-sage-100 text-sage-700 flex items-center justify-center shrink-0 font-bold">
+                                <i class="fas fa-check text-gold-500"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-sage-900">Bahan Baku Segar & Berkualitas</h4>
+                                <p class="text-sm text-gray-500 font-light">Diolah langsung oleh chef berpengalaman dengan standar kebersihan tinggi.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-4">
+                            <div class="w-10 h-10 rounded-lg bg-sage-100 text-sage-700 flex items-center justify-center shrink-0 font-bold">
+                                <i class="fas fa-check text-gold-500"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-sage-900">Paket All-In Bebas Repot</h4>
+                                <p class="text-sm text-gray-500 font-light">Lengkap dari Dekorasi, Rias/MUA, Busana, Catering, Dokumentasi hingga MC & WO.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="lg:col-span-7 grid grid-cols-1 sm:grid-cols-2 gap-6">
+                    <div class="bg-white p-6 rounded-2xl border border-gray-100 shadow-sm hover:shadow-md transition">
+                        <div class="w-12 h-12 bg-sage-600/10 text-sage-700 rounded-xl flex items-center justify-center text-xl mb-4">
+                            <i class="fas fa-ring text-gold-500"></i>
+                        </div>
+                        <h3 class="font-serif font-bold text-xl text-sage-900 mb-2">Katering Pernikahan & Acara</h3>
+                        <p class="text-sm text-gray-600 font-light">Paket lengkap pernikahan di gedung maupun rumah dengan dekorasi & rias busana elegan.</p>
+                    </div>
+
+                    <div class="bg-white p-6 rounded-2xl border border-gray-100 shadow-sm hover:shadow-md transition">
+                        <div class="w-12 h-12 bg-sage-600/10 text-sage-700 rounded-xl flex items-center justify-center text-xl mb-4">
+                            <i class="fas fa-building text-gold-500"></i>
+                        </div>
+                        <h3 class="font-serif font-bold text-xl text-sage-900 mb-2">Katering Perusahaan</h3>
+                        <p class="text-sm text-gray-600 font-light">Layanan katering prasmanan dan tumpeng/coffeebreak untuk corporate event & seminar.</p>
+                    </div>
+
+                    <div class="bg-white p-6 rounded-2xl border border-gray-100 shadow-sm hover:shadow-md transition">
+                        <div class="w-12 h-12 bg-sage-600/10 text-sage-700 rounded-xl flex items-center justify-center text-xl mb-4">
+                            <i class="fas fa-box text-gold-500"></i>
+                        </div>
+                        <h3 class="font-serif font-bold text-xl text-sage-900 mb-2">Nasi Box & Snack Box</h3>
+                        <p class="text-sm text-gray-600 font-light">Pilihan sajian praktis dengan kemasan higienis untuk berbagai skala acara.</p>
+                    </div>
+
+                    <div class="bg-white p-6 rounded-2xl border border-gray-100 shadow-sm hover:shadow-md transition">
+                        <div class="w-12 h-12 bg-sage-600/10 text-sage-700 rounded-xl flex items-center justify-center text-xl mb-4">
+                            <i class="fas fa-utensils text-gold-500"></i>
+                        </div>
+                        <h3 class="font-serif font-bold text-xl text-sage-900 mb-2">Custom Menu & Gubug</h3>
+                        <p class="text-sm text-gray-600 font-light">Variasi puluhan gubug tradisional dan internasional yang dapat dipadukan sesuai selera.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Paket Pernikahan Catalogue -->
+    <section id="paket" class="py-20 bg-sand/50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-gold-600 font-semibold text-xs uppercase tracking-widest block mb-2">Katalog Resmi 2026</span>
+                <h2 class="font-serif text-3xl sm:text-5xl font-bold text-sage-900 mb-4">Paket Pernikahan All-In</h2>
+                <p class="text-gray-600 font-light">Pilihan paket komprehensif mulai dari intimate gathering hingga acara besar 1000 undangan (2000 porsi).</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                
+                <!-- Paket Intimate -->
+                <div class="bg-white rounded-3xl overflow-hidden border border-gray-200/80 shadow-lg hover:shadow-xl transition flex flex-col justify-between group relative">
+                    <div class="p-8">
+                        <span class="inline-block px-3 py-1 bg-sage-100 text-sage-800 rounded-full text-xs font-semibold uppercase tracking-wider mb-4">Intimate Event</span>
+                        <h3 class="font-serif text-2xl font-bold text-sage-900 mb-1">Paket Intimate</h3>
+                        <p class="text-xs text-gray-500 mb-4">150 Pax (300 Porsi Buffet)</p>
+                        <div class="py-4 border-y border-gray-100 mb-6">
+                            <span class="text-xs text-gray-400 block">Harga Spesial</span>
+                            <span class="font-serif text-3xl font-bold text-gold-500">Rp 35.000.000</span>
+                        </div>
+                        <ul class="space-y-3 text-sm text-gray-600 font-light mb-6">
+                            <li class="flex items-center gap-2"><i class="fas fa-check text-sage-600 text-xs"></i> Pelaminan Modern / Gebyok 5m</li>
+                            <li class="flex items-center gap-2"><i class="fas fa-check text-sage-600 text-xs"></i> Tenda Dekorasi 80m / Gedung</li>
+                            <li class="flex items-center gap-2"><i class="fas fa-check text-sage-600 text-xs"></i> 1 Pasang Busana Pengantin + MUA</li>
+                            <li class="flex items-center gap-2"><i class="fas fa-check text-sage-600 text-xs"></i> Buffet Utama 300 Porsi (Menu A)</li>
+                            <li class="flex items-center gap-2"><i class="fas fa-check text-sage-600 text-xs"></i> Stall Dimsum & Bakso (@80 porsi)</li>
+                            <li class="flex items-center gap-2"><i class="fas fa-check text-sage-600 text-xs"></i> Foto & Video Sinematik (Kolase)</li>
+                        </ul>
+                    </div>
+                    <div class="p-6 bg-gray-50 border-t border-gray-100">
+                        <button onclick="openModal('intimate')" class="w-full bg-sage-700 hover:bg-sage-800 text-white font-medium py-3 rounded-xl transition text-sm">Rincian Lengkap</button>
+                    </div>
+                </div>
+
+                <!-- Paket Basic -->
+                <div class="bg-white rounded-3xl overflow-hidden border border-gray-200/80 shadow-lg hover:shadow-xl transition flex flex-col justify-between group relative">
+                    <div class="p-8">
+                        <span class="inline-block px-3 py-1 bg-sage-100 text-sage-800 rounded-full text-xs font-semibold uppercase tracking-wider mb-4">Popular Choice</span>
+                        <h3 class="font-serif text-2xl font-bold text-sage-900 mb-1">Paket Basic</h3>
+                        <p class="text-xs text-gray-500 mb-4">500 Pax (1000 Porsi Buffet)</p>
+                        <div class="py-4 border-y border-gray-100 mb-6">
+                            <span class="text-xs text-gray-400 block">Harga Spesial</span>
+                            <span class="font-serif text-3xl font-bold text-gold-500">Rp 75.000.000</span>
+                        </div>
+                        <ul class="space-y-3 text-sm text-gray-600 font-light mb-6">
+                            <li class="flex items-center gap-2"><i class="fas fa-check text-sage-600 text-xs"></i> Pelaminan Modern 5-7m + Gazebo</li>
+                            <li class="flex items-center gap-2"><i class="fas fa-check text-sage-600 text-xs"></i> Tenda Dekorasi 110m</li>
+                            <li class="flex items-center gap-2"><i class="fas fa-check text-sage-600 text-xs"></i> 3 Pasang Busana Pengantin + MUA</li>
+                            <li class="flex items-center gap-2"><i class="fas fa-check text-sage-600 text-xs"></i> Buffet Utama 1000 Porsi</li>
+                            <li class="flex items-center gap-2"><i class="fas fa-check text-sage-600 text-xs"></i> Stall Es Doger, Dimsum, Bakso (@200 porsi)</li>
+                            <li class="flex items-center gap-2"><i class="fas fa-check text-sage-600 text-xs"></i> Bonus 50 Porsi Soto Ayam + Puding</li>
+                        </ul>
+                    </div>
+                    <div class="p-6 bg-gray-50 border-t border-gray-100">
+                        <button onclick="openModal('basic')" class="w-full bg-sage-700 hover:bg-sage-800 text-white font-medium py-3 rounded-xl transition text-sm">Rincian Lengkap</button>
+                    </div>
+                </div>
+
+                <!-- Paket Signature -->
+                <div class="bg-sage-900 text-white rounded-3xl overflow-hidden border-2 border-gold-400 shadow-2xl hover:shadow-2xl transition flex flex-col justify-between group relative transform -translate-y-2 lg:-translate-y-4">
+                    <div class="bg-gradient-to-r from-gold-500 to-gold-400 text-sage-900 text-center text-xs font-bold py-2 uppercase tracking-widest">
+                        Rekomendasi Terbaik
+                    </div>
+                    <div class="p-8">
+                        <span class="inline-block px-3 py-1 bg-gold-400/20 text-gold-300 rounded-full text-xs font-semibold uppercase tracking-wider mb-4 border border-gold-400/30">Grand Celebration</span>
+                        <h3 class="font-serif text-2xl font-bold text-white mb-1">Paket Signature</h3>
+                        <p class="text-xs text-gold-200/80 mb-4">700 Pax (1400 Porsi Buffet)</p>
+                        <div class="py-4 border-y border-white/10 mb-6">
+                            <span class="text-xs text-gray-400 block">Harga Spesial</span>
+                            <span class="font-serif text-3xl font-bold text-gold-400">Rp 120.000.000</span>
+                        </div>
+                        <ul class="space-y-3 text-sm text-gray-300 font-light mb-6">
+                            <li class="flex items-center gap-2"><i class="fas fa-star text-gold-400 text-xs"></i> Pelaminan Modern / Drappery 5-8m</li>
+                            <li class="flex items-center gap-2"><i class="fas fa-star text-gold-400 text-xs"></i> 2 Jalur Buffet Umum + VIP</li>
+                            <li class="flex items-center gap-2"><i class="fas fa-star text-gold-400 text-xs"></i> Pilihan Menu B / C Premium</li>
+                            <li class="flex items-center gap-2"><i class="fas fa-star text-gold-400 text-xs"></i> Stall Zuppa Soup, Dimsum, Bakso, Crepes, Es Doger</li>
+                            <li class="flex items-center gap-2"><i class="fas fa-star text-gold-400 text-xs"></i> Include MC Acara & Tirai 60m</li>
+                        </ul>
+                    </div>
+                    <div class="p-6 bg-sage-800 border-t border-white/10">
+                        <button onclick="openModal('signature')" class="w-full bg-gold-500 hover:bg-gold-400 text-sage-900 font-bold py-3 rounded-xl transition text-sm">Rincian Lengkap</button>
+                    </div>
+                </div>
+
+                <!-- Paket Luxury -->
+                <div class="bg-white rounded-3xl overflow-hidden border border-gray-200/80 shadow-lg hover:shadow-xl transition flex flex-col justify-between group relative">
+                    <div class="p-8">
+                        <span class="inline-block px-3 py-1 bg-sage-100 text-sage-800 rounded-full text-xs font-semibold uppercase tracking-wider mb-4">Ultimate Luxury</span>
+                        <h3 class="font-serif text-2xl font-bold text-sage-900 mb-1">Paket Luxury</h3>
+                        <p class="text-xs text-gray-500 mb-4">1000 Pax (2000 Porsi Buffet)</p>
+                        <div class="py-4 border-y border-gray-100 mb-6">
+                            <span class="text-xs text-gray-400 block">Harga Spesial</span>
+                            <span class="font-serif text-3xl font-bold text-gold-500">Rp 155.000.000</span>
+                        </div>
+                        <ul class="space-y-3 text-sm text-gray-600 font-light mb-6">
+                            <li class="flex items-center gap-2"><i class="fas fa-check text-sage-600 text-xs"></i> Dekorasi Mewah Lengkap VIP</li>
+                            <li class="flex items-center gap-2"><i class="fas fa-check text-sage-600 text-xs"></i> Buffet Utama 2000 Porsi (Menu B/C/D)</li>
+                            <li class="flex items-center gap-2"><i class="fas fa-check text-sage-600 text-xs"></i> 5 Stand Stall Melimpah</li>
+                            <li class="flex items-center gap-2"><i class="fas fa-check text-sage-600 text-xs"></i> Include Wedding Organizer (WO) & MC</li>
+                            <li class="flex items-center gap-2"><i class="fas fa-check text-sage-600 text-xs"></i> Complete Photo & Video Documentation</li>
+                        </ul>
+                    </div>
+                    <div class="p-6 bg-gray-50 border-t border-gray-100">
+                        <button onclick="openModal('luxury')" class="w-full bg-sage-700 hover:bg-sage-800 text-white font-medium py-3 rounded-xl transition text-sm">Rincian Lengkap</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Menu Prasmanan (Buffet) Showcase -->
+    <section id="prasmanan" class="py-20 bg-cream">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-12">
+                <span class="text-gold-600 font-semibold text-xs uppercase tracking-widest block mb-2">Pilihan Cita Rasa</span>
+                <h2 class="font-serif text-3xl sm:text-5xl font-bold text-sage-900 mb-4">Menu Prasmanan Wedding</h2>
+                <p class="text-gray-600 font-light">Set menu prasmanan fleksibel mulai Rp 55.000,- / porsi dengan standar rasa lezat dan penyajian mewah.</p>
+            </div>
+
+            <!-- Tabs Navigation -->
+            <div class="flex justify-center flex-wrap gap-2 sm:gap-4 mb-10">
+                <button onclick="switchMenu('menu-a')" id="btn-menu-a" class="menu-tab-btn active px-6 py-3 rounded-full font-medium text-sm transition bg-sage-700 text-white shadow-md">
+                    Menu A (Rp 55.000/porsi)
+                </button>
+                <button onclick="switchMenu('menu-b')" id="btn-menu-b" class="menu-tab-btn px-6 py-3 rounded-full font-medium text-sm transition bg-white text-gray-700 hover:bg-gray-100 border border-gray-200">
+                    Menu B (Rp 65.000/porsi)
+                </button>
+                <button onclick="switchMenu('menu-c')" id="btn-menu-c" class="menu-tab-btn px-6 py-3 rounded-full font-medium text-sm transition bg-white text-gray-700 hover:bg-gray-100 border border-gray-200">
+                    Menu C (Rp 75.000/porsi)
+                </button>
+                <button onclick="switchMenu('menu-d')" id="btn-menu-d" class="menu-tab-btn px-6 py-3 rounded-full font-medium text-sm transition bg-white text-gray-700 hover:bg-gray-100 border border-gray-200">
+                    Menu D (Rp 95.000/porsi)
+                </button>
+            </div>
+
+            <!-- Tab Content Cards -->
+            <div class="bg-white rounded-3xl p-8 sm:p-12 border border-gray-200/80 shadow-lg max-w-5xl mx-auto">
+                
+                <!-- Menu A -->
+                <div id="content-menu-a" class="menu-content block">
+                    <div class="flex flex-col md:flex-row justify-between items-start md:items-center pb-6 border-b border-gray-100 mb-8">
+                        <div>
+                            <h3 class="font-serif text-2xl font-bold text-sage-900">Wedding Menu A</h3>
+                            <p class="text-sm text-gray-500 font-light">Sajian hidangan lezat standar prasmanan terbaik</p>
+                        </div>
+                        <span class="text-2xl font-serif font-bold text-gold-500 mt-2 md:mt-0">IDR 55.000,- <span class="text-xs text-gray-400 font-sans font-normal">/ porsi</span></span>
+                    </div>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                        <div>
+                            <h4 class="font-bold text-sage-800 uppercase tracking-wider text-xs mb-3 flex items-center gap-2"><i class="fas fa-bowl-food text-gold-500"></i> Pembuka & Olahan</h4>
+                            <ul class="text-sm text-gray-600 space-y-2 font-light">
+                                <li>• Sop Kimlo / Sop Ayam Jagung Bakso / Sop Pengantin</li>
+                                <li>• Asinan / Capcay / Karedok / Kentang Balado / Kentang Mustofa / Salad</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-sage-800 uppercase tracking-wider text-xs mb-3 flex items-center gap-2"><i class="fas fa-drumstick-bite text-gold-500"></i> Hidangan Utama</h4>
+                            <ul class="text-sm text-gray-600 space-y-2 font-light">
+                                <li>• Nasi Putih</li>
+                                <li>• Mie Goreng / Bihun Goreng Singapore</li>
+                                <li>• Ayam Teriyaki / Ayam Goreng Mentega / Ayam Balado / Ayam Bakar Bumbu Rujak</li>
+                                <li>• Ikan Tuna Fillet / Ikan Kakap Saus Asam Manis</li>
+                                <li>• Kerupuk</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-sage-800 uppercase tracking-wider text-xs mb-3 flex items-center gap-2"><i class="fas fa-ice-cream text-gold-500"></i> Penutup</h4>
+                            <ul class="text-sm text-gray-600 space-y-2 font-light">
+                                <li>• Puding Segar</li>
+                                <li>• Buah Potong Manis</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Menu B -->
+                <div id="content-menu-b" class="menu-content hidden">
+                    <div class="flex flex-col md:flex-row justify-between items-start md:items-center pb-6 border-b border-gray-100 mb-8">
+                        <div>
+                            <h3 class="font-serif text-2xl font-bold text-sage-900">Wedding Menu B</h3>
+                            <p class="text-sm text-gray-500 font-light">Sajian variatif lengkap dengan variasi olahan Daging Sapi</p>
+                        </div>
+                        <span class="text-2xl font-serif font-bold text-gold-500 mt-2 md:mt-0">IDR 65.000,- <span class="text-xs text-gray-400 font-sans font-normal">/ porsi</span></span>
+                    </div>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                        <div>
+                            <h4 class="font-bold text-sage-800 uppercase tracking-wider text-xs mb-3 flex items-center gap-2"><i class="fas fa-bowl-food text-gold-500"></i> Pembuka & Olahan</h4>
+                            <ul class="text-sm text-gray-600 space-y-2 font-light">
+                                <li>• Sop Kimlo / Sop Ayam Jagung Bakso Sosis / Sop Pengantin</li>
+                                <li>• Asinan / Capcay / Karedok / Kentang Balado / Kentang Mustofa / Salad</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-sage-800 uppercase tracking-wider text-xs mb-3 flex items-center gap-2"><i class="fas fa-drumstick-bite text-gold-500"></i> Hidangan Utama</h4>
+                            <ul class="text-sm text-gray-600 space-y-2 font-light">
+                                <li>• Nasi Putih & Nasi Goreng</li>
+                                <li>• Mie Goreng / Bihun Goreng Singapore</li>
+                                <li>• Daging Teriyaki / Sapi Lada Hitam / Rendang / Dendeng Cah Brokoli / Dendeng Basah / Dendeng Batoko / Bistik Daging</li>
+                                <li>• Ayam Teriyaki / Ayam Goreng Mentega / Ayam Balado / Ayam Bakar / Ikan Tuna / Kakap</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-sage-800 uppercase tracking-wider text-xs mb-3 flex items-center gap-2"><i class="fas fa-glass-water text-gold-500"></i> Penutup</h4>
+                            <ul class="text-sm text-gray-600 space-y-2 font-light">
+                                <li>• Aneka Softdrink</li>
+                                <li>• Puding Segar</li>
+                                <li>• Buah Potong</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Menu C -->
+                <div id="content-menu-c" class="menu-content hidden">
+                    <div class="flex flex-col md:flex-row justify-between items-start md:items-center pb-6 border-b border-gray-100 mb-8">
+                        <div>
+                            <h3 class="font-serif text-2xl font-bold text-sage-900">Wedding Menu C</h3>
+                            <p class="text-sm text-gray-500 font-light">Hidangan spesial lengkap dengan Gurame & Jajanan Pasar</p>
+                        </div>
+                        <span class="text-2xl font-serif font-bold text-gold-500 mt-2 md:mt-0">IDR 75.000,- <span class="text-xs text-gray-400 font-sans font-normal">/ porsi</span></span>
+                    </div>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                        <div>
+                            <h4 class="font-bold text-sage-800 uppercase tracking-wider text-xs mb-3 flex items-center gap-2"><i class="fas fa-bowl-food text-gold-500"></i> Pembuka & Olahan</h4>
+                            <ul class="text-sm text-gray-600 space-y-2 font-light">
+                                <li>• Sop Kimlo / Sop Ayam Jagung Bakso Sosis / Sop Pengantin</li>
+                                <li>• Asinan / Capcay / Karedok / Kentang Balado / Kentang Mustofa / Salad</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-sage-800 uppercase tracking-wider text-xs mb-3 flex items-center gap-2"><i class="fas fa-drumstick-bite text-gold-500"></i> Hidangan Utama</h4>
+                            <ul class="text-sm text-gray-600 space-y-2 font-light">
+                                <li>• Nasi Putih & Nasi Goreng</li>
+                                <li>• Mie Goreng / Bihun Goreng Singapore</li>
+                                <li>• Pilihan Olahan Daging Sapi Pilihan</li>
+                                <li>• Olahan Ayam Teriyaki / Mentega / Balado / Rujak</li>
+                                <li>• Ikan Tuna Fillet / Ikan Kakap / Ikan Gurame Saus Asam Manis</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-sage-800 uppercase tracking-wider text-xs mb-3 flex items-center gap-2"><i class="fas fa-cookie-bite text-gold-500"></i> Penutup & Snack</h4>
+                            <ul class="text-sm text-gray-600 space-y-2 font-light">
+                                <li>• Aneka Softdrink</li>
+                                <li>• Aneka Snack / Jajanan Pasar</li>
+                                <li>• Puding & Buah Potong</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Menu D -->
+                <div id="content-menu-d" class="menu-content hidden">
+                    <div class="flex flex-col md:flex-row justify-between items-start md:items-center pb-6 border-b border-gray-100 mb-8">
+                        <div>
+                            <h3 class="font-serif text-2xl font-bold text-sage-900">Wedding Menu D</h3>
+                            <p class="text-sm text-gray-500 font-light">Menu paling mewah lengkap dengan Seafood (Udang / Cumi)</p>
+                        </div>
+                        <span class="text-2xl font-serif font-bold text-gold-500 mt-2 md:mt-0">IDR 95.000,- <span class="text-xs text-gray-400 font-sans font-normal">/ porsi</span></span>
+                    </div>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                        <div>
+                            <h4 class="font-bold text-sage-800 uppercase tracking-wider text-xs mb-3 flex items-center gap-2"><i class="fas fa-bowl-food text-gold-500"></i> Pembuka & Olahan</h4>
+                            <ul class="text-sm text-gray-600 space-y-2 font-light">
+                                <li>• Sop Kimlo / Sop Ayam Jagung Bakso Sosis / Sop Pengantin</li>
+                                <li>• Asinan / Capcay / Karedok / Kentang Balado / Salad</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-sage-800 uppercase tracking-wider text-xs mb-3 flex items-center gap-2"><i class="fas fa-fish text-gold-500"></i> Utama & Seafood</h4>
+                            <ul class="text-sm text-gray-600 space-y-2 font-light">
+                                <li>• Nasi Putih & Nasi Goreng / Bihun</li>
+                                <li>• Daging Sapi (Teriyaki / Lada Hitam / Rendang / Bistik)</li>
+                                <li>• Ayam (Teriyaki / Mentega / Balado / Rujak)</li>
+                                <li>• Ikan Tuna / Kakap / Gurame / Dori Asam Manis</li>
+                                <li>• Udang Saus Padang / Mayonaise ATAU Cumi Saos Tiram / Cabe Garam</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-sage-800 uppercase tracking-wider text-xs mb-3 flex items-center gap-2"><i class="fas fa-champagne-glasses text-gold-500"></i> Penutup & Dessert</h4>
+                            <ul class="text-sm text-gray-600 space-y-2 font-light">
+                                <li>• Aneka Softdrink & Es Segar</li>
+                                <li>• Aneka Snack & Jajanan Pasar</li>
+                                <li>• Puding & Buah Potong Segar</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Menu Gubug (Stall Showcase) -->
+    <section id="gubug" class="py-20 bg-sand/30">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-12">
+                <span class="text-gold-600 font-semibold text-xs uppercase tracking-widest block mb-2">Pilihan Stand Tambahan</span>
+                <h2 class="font-serif text-3xl sm:text-5xl font-bold text-sage-900 mb-4">Aneka Menu Gubug / Stall</h2>
+                <p class="text-gray-600 font-light">Variasi makanan pondokan favorit untuk menyempurnakan pesta pernikahan Anda.</p>
+            </div>
+
+            <!-- Search Filter -->
+            <div class="max-w-md mx-auto mb-10">
+                <div class="relative">
+                    <input type="text" id="stall-search" placeholder="Cari menu gubug (misal: Kambing, Zuppa, Sate)..." class="w-full px-5 py-3 pl-12 rounded-full border border-gray-300 focus:outline-none focus:border-sage-600 shadow-sm text-sm">
+                    <i class="fas fa-search absolute left-4 top-3.5 text-gray-400"></i>
+                </div>
+            </div>
+
+            <div id="stall-grid" class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4">
+                <!-- Stall Items -->
+                <div class="stall-item bg-white p-4 rounded-2xl border border-gray-100 shadow-sm text-center hover:shadow-md transition">
+                    <div class="w-10 h-10 bg-gold-400/10 text-gold-600 rounded-full flex items-center justify-center mx-auto mb-2 text-lg"><i class="fas fa-drumstick-bite"></i></div>
+                    <h4 class="font-semibold text-sm text-sage-900">Kambing Guling</h4>
+                    <span class="text-xs text-gold-600 font-medium block mt-1">Rp 1.500.000 / Ekor</span>
+                </div>
+
+                <div class="stall-item bg-white p-4 rounded-2xl border border-gray-100 shadow-sm text-center hover:shadow-md transition">
+                    <div class="w-10 h-10 bg-sage-100 text-sage-700 rounded-full flex items-center justify-center mx-auto mb-2 text-lg"><i class="fas fa-bowl-rice"></i></div>
+                    <h4 class="font-semibold text-sm text-sage-900">Zuppa Soup</h4>
+                    <span class="text-xs text-gray-400 block mt-1">Harga per pax</span>
+                </div>
+
+                <div class="stall-item bg-white p-4 rounded-2xl border border-gray-100 shadow-sm text-center hover:shadow-md transition">
+                    <div class="w-10 h-10 bg-sage-100 text-sage-700 rounded-full flex items-center justify-center mx-auto mb-2 text-lg"><i class="fas fa-dumpling"></i></div>
+                    <h4 class="font-semibold text-sm text-sage-900">Dimsum</h4>
+                    <span class="text-xs text-gray-400 block mt-1">Harga per pax</span>
+                </div>
+
+                <div class="stall-item bg-white p-4 rounded-2xl border border-gray-100 shadow-sm text-center hover:shadow-md transition">
+                    <div class="w-10 h-10 bg-sage-100 text-sage-700 rounded-full flex items-center justify-center mx-auto mb-2 text-lg"><i class="fas fa-bowl-food"></i></div>
+                    <h4 class="font-semibold text-sm text-sage-900">Bakso Sapi / Malang</h4>
+                    <span class="text-xs text-gray-400 block mt-1">Harga per pax</span>
+                </div>
+
+                <div class="stall-item bg-white p-4 rounded-2xl border border-gray-100 shadow-sm text-center hover:shadow-md transition">
+                    <div class="w-10 h-10 bg-sage-100 text-sage-700 rounded-full flex items-center justify-center mx-auto mb-2 text-lg"><i class="fas fa-ice-cream"></i></div>
+                    <h4 class="font-semibold text-sm text-sage-900">Es Doger / Podeng</h4>
+                    <span class="text-xs text-gray-400 block mt-1">Harga per pax</span>
+                </div>
+
+                <div class="stall-item bg-white p-4 rounded-2xl border border-gray-100 shadow-sm text-center hover:shadow-md transition">
+                    <div class="w-10 h-10 bg-sage-100 text-sage-700 rounded-full flex items-center justify-center mx-auto mb-2 text-lg"><i class="fas fa-cookie"></i></div>
+                    <h4 class="font-semibold text-sm text-sage-900">Crepes / Dessert</h4>
+                    <span class="text-xs text-gray-400 block mt-1">Harga per pax</span>
+                </div>
+
+                <div class="stall-item bg-white p-4 rounded-2xl border border-gray-100 shadow-sm text-center hover:shadow-md transition">
+                    <div class="w-10 h-10 bg-sage-100 text-sage-700 rounded-full flex items-center justify-center mx-auto mb-2 text-lg"><i class="fas fa-utensils"></i></div>
+                    <h4 class="font-semibold text-sm text-sage-900">Siomay Bandung</h4>
+                    <span class="text-xs text-gray-400 block mt-1">Harga per pax</span>
+                </div>
+
+                <div class="stall-item bg-white p-4 rounded-2xl border border-gray-100 shadow-sm text-center hover:shadow-md transition">
+                    <div class="w-10 h-10 bg-sage-100 text-sage-700 rounded-full flex items-center justify-center mx-auto mb-2 text-lg"><i class="fas fa-utensils"></i></div>
+                    <h4 class="font-semibold text-sm text-sage-900">Sate Ayam / Kambing</h4>
+                    <span class="text-xs text-gray-400 block mt-1">Harga per pax</span>
+                </div>
+
+                <div class="stall-item bg-white p-4 rounded-2xl border border-gray-100 shadow-sm text-center hover:shadow-md transition">
+                    <div class="w-10 h-10 bg-sage-100 text-sage-700 rounded-full flex items-center justify-center mx-auto mb-2 text-lg"><i class="fas fa-bowl-food"></i></div>
+                    <h4 class="font-semibold text-sm text-sage-900">Soto Ayam / Mie Bogor</h4>
+                    <span class="text-xs text-gray-400 block mt-1">Harga per pax</span>
+                </div>
+
+                <div class="stall-item bg-white p-4 rounded-2xl border border-gray-100 shadow-sm text-center hover:shadow-md transition">
+                    <div class="w-10 h-10 bg-sage-100 text-sage-700 rounded-full flex items-center justify-center mx-auto mb-2 text-lg"><i class="fas fa-plate-wheat"></i></div>
+                    <h4 class="font-semibold text-sm text-sage-900">Nasi Kebuli / Biryani</h4>
+                    <span class="text-xs text-gray-400 block mt-1">Harga per pax</span>
+                </div>
+
+                <div class="stall-item bg-white p-4 rounded-2xl border border-gray-100 shadow-sm text-center hover:shadow-md transition">
+                    <div class="w-10 h-10 bg-sage-100 text-sage-700 rounded-full flex items-center justify-center mx-auto mb-2 text-lg"><i class="fas fa-burger"></i></div>
+                    <h4 class="font-semibold text-sm text-sage-900">Chicken Cordon Bleu</h4>
+                    <span class="text-xs text-gray-400 block mt-1">Harga per pax</span>
+                </div>
+
+                <div class="stall-item bg-white p-4 rounded-2xl border border-gray-100 shadow-sm text-center hover:shadow-md transition">
+                    <div class="w-10 h-10 bg-sage-100 text-sage-700 rounded-full flex items-center justify-center mx-auto mb-2 text-lg"><i class="fas fa-mortar-pestle"></i></div>
+                    <h4 class="font-semibold text-sm text-sage-900">Pasta / Lasagna</h4>
+                    <span class="text-xs text-gray-400 block mt-1">Harga per pax</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive Budget Calculator -->
+    <section id="kalkulator" class="py-20 bg-sage-900 text-white relative">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <span class="text-gold-400 font-semibold text-xs uppercase tracking-widest block mb-2">Simulasi Anggaran Pernikahan</span>
+                <h2 class="font-serif text-3xl sm:text-4xl font-bold mb-4">Kalkulator Biaya Interaktif</h2>
+                <p class="text-gray-300 font-light text-sm">Hitung perkiraan biaya paket atau catering prasmanan sesuai jumlah tamu dan pilihan tambahan Anda.</p>
+            </div>
+
+            <div class="bg-sage-800 rounded-3xl p-6 sm:p-10 border border-white/10 shadow-2xl">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
+                    
+                    <!-- Form Controls -->
+                    <div class="space-y-6">
+                        <div>
+                            <label class="block text-sm font-medium text-gray-300 mb-2">Jenis Layanan</label>
+                            <select id="calc-type" onchange="calculateBudget()" class="w-full bg-sage-900 border border-gray-600 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-gold-400 text-sm">
+                                <option value="package">Paket Pernikahan All-In</option>
+                                <option value="buffet">Catering Prasmanan Only</option>
+                            </select>
+                        </div>
+
+                        <!-- Package Selection -->
+                        <div id="group-package">
+                            <label class="block text-sm font-medium text-gray-300 mb-2">Pilih Paket Pernikahan</label>
+                            <select id="calc-package" onchange="calculateBudget()" class="w-full bg-sage-900 border border-gray-600 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-gold-400 text-sm">
+                                <option value="35000000">Paket Intimate (150 Pax) - Rp 35.000.000</option>
+                                <option value="75000000" selected>Paket Basic (500 Pax) - Rp 75.000.000</option>
+                                <option value="120000000">Paket Signature (700 Pax) - Rp 120.000.000</option>
+                                <option value="155000000">Paket Luxury (1000 Pax) - Rp 155.000.000</option>
+                            </select>
+                        </div>
+
+                        <!-- Buffet Options -->
+                        <div id="group-buffet" class="hidden space-y-4">
+                            <div>
+                                <label class="block text-sm font-medium text-gray-300 mb-2">Pilihan Set Menu Prasmanan</label>
+                                <select id="calc-menu-price" onchange="calculateBudget()" class="w-full bg-sage-900 border border-gray-600 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-gold-400 text-sm">
+                                    <option value="55000">Menu A - Rp 55.000 / porsi</option>
+                                    <option value="65000">Menu B - Rp 65.000 / porsi</option>
+                                    <option value="75000">Menu C - Rp 75.000 / porsi</option>
+                                    <option value="95000">Menu D - Rp 95.000 / porsi</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium text-gray-300 mb-2">Jumlah Porsi (Min. 200)</label>
+                                <input type="number" id="calc-pax" value="500" min="200" step="50" onchange="calculateBudget()" oninput="calculateBudget()" class="w-full bg-sage-900 border border-gray-600 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-gold-400 text-sm">
+                            </div>
+                        </div>
+
+                        <!-- Add-ons -->
+                        <div>
+                            <label class="block text-sm font-medium text-gray-300 mb-2">Tambahan Kambing Guling (Ekor)</label>
+                            <input type="number" id="calc-kambing" value="0" min="0" onchange="calculateBudget()" oninput="calculateBudget()" class="w-full bg-sage-900 border border-gray-600 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-gold-400 text-sm" placeholder="Rp 1.500.000 / ekor">
+                        </div>
+                    </div>
+
+                    <!-- Result Box -->
+                    <div class="bg-sage-900/80 rounded-2xl p-6 border border-gold-400/30 flex flex-col justify-between">
+                        <div>
+                            <span class="text-xs uppercase tracking-widest text-gold-400 font-semibold block mb-2">Perkiraan Biaya Total</span>
+                            <div id="calc-total-display" class="font-serif text-3xl sm:text-4xl font-bold text-gold-400 mb-4">Rp 75.000.000</div>
+                            <p class="text-xs text-gray-400 font-light leading-relaxed mb-4" id="calc-detail-text">
+                                Termasuk fasilitas lengkap Paket Basic untuk 500 pax (1000 porsi).
+                            </p>
+                        </div>
+
+                        <a id="calc-wa-btn" href="#" target="_blank" class="w-full bg-gradient-to-r from-gold-500 to-gold-400 text-sage-900 font-bold py-3.5 px-4 rounded-xl text-center text-sm hover:shadow-lg transition flex items-center justify-center gap-2">
+                            <i class="fab fa-whatsapp text-lg"></i>
+                            <span>Pesan / Konsultasi Hasil Ini</span>
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer / Kontak -->
+    <footer id="kontak" class="bg-sage-950 text-white pt-16 pb-12 border-t border-gold-400/20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
+                <div>
+                    <div class="flex items-center gap-3 mb-4">
+                        <div class="w-10 h-10 rounded-full border border-gold-400 flex items-center justify-center bg-sage-900 text-gold-400 font-serif font-bold text-xl">G</div>
+                        <span class="font-serif text-2xl font-bold text-white">Ghalda</span>
+                    </div>
+                    <p class="text-xs text-gray-400 font-light leading-relaxed mb-4">
+                        Layanan Katering & Pernikahan Profesional. Menghadirkan sajian istimewa & dekorasi berkelas di setiap momen bahagia Anda.
+                    </p>
+                    <div class="flex items-center gap-3 text-gold-400">
+                        <a href="https://instagram.com/ghaldacatering" target="_blank" class="w-8 h-8 rounded-full bg-sage-900 border border-gold-400/30 flex items-center justify-center hover:border-gold-400 transition text-sm"><i class="fab fa-instagram"></i></a>
+                        <a href="https://facebook.com/ghaldacatering" target="_blank" class="w-8 h-8 rounded-full bg-sage-900 border border-gold-400/30 flex items-center justify-center hover:border-gold-400 transition text-sm"><i class="fab fa-facebook-f"></i></a>
+                        <a href="mailto:ghaldacateringservice@gmail.com" class="w-8 h-8 rounded-full bg-sage-900 border border-gold-400/30 flex items-center justify-center hover:border-gold-400 transition text-sm"><i class="fas fa-envelope"></i></a>
+                    </div>
+                </div>
+
+                <div>
+                    <h4 class="font-serif font-bold text-gold-400 mb-4 text-base">Kontak WhatsApp</h4>
+                    <ul class="space-y-3 text-xs text-gray-300 font-light">
+                        <li>
+                            <a href="https://wa.me/6285715546706" target="_blank" class="hover:text-gold-400 transition flex items-center gap-2">
+                                <i class="fab fa-whatsapp text-gold-400"></i> 0857-1554-6706 (Admin 1)
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://wa.me/6281905603309" target="_blank" class="hover:text-gold-400 transition flex items-center gap-2">
+                                <i class="fab fa-whatsapp text-gold-400"></i> 0819-0560-3309 (Admin 2)
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://wa.me/6285121550731" target="_blank" class="hover:text-gold-400 transition flex items-center gap-2">
+                                <i class="fab fa-whatsapp text-gold-400"></i> 0851-2155-0731 (Admin 3)
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="font-serif font-bold text-gold-400 mb-4 text-base">Alamat & Email</h4>
+                    <p class="text-xs text-gray-300 font-light leading-relaxed mb-3">
+                        <i class="fas fa-map-marker-alt text-gold-400 mr-2"></i> Jl. Warung Jati Timur 1 No. 48, Kalibata, Pancoran, Jakarta Selatan
+                    </p>
+                    <p class="text-xs text-gray-300 font-light">
+                        <i class="fas fa-envelope text-gold-400 mr-2"></i> ghaldacateringservice@gmail.com
+                    </p>
+                </div>
+
+                <div>
+                    <h4 class="font-serif font-bold text-gold-400 mb-4 text-base">Layanan Utama</h4>
+                    <ul class="space-y-2 text-xs text-gray-300 font-light">
+                        <li>• Katering Pernikahan (Gedung & Rumah)</li>
+                        <li>• Katering Perusahaan & Seminar</li>
+                        <li>• Nasi Box & Snack Box Prasmanan</li>
+                        <li>• Custom Menu & Gubug Tradisional</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="pt-8 border-t border-white/10 text-center text-xs text-gray-500 font-light">
+                &copy; 2026 Ghalda Catering Service & Wedding Package. All Rights Reserved.
+            </div>
+        </div>
+    </footer>
+
+    <!-- Modal Detail Paket -->
+    <div id="package-modal" class="fixed inset-0 z-50 hidden bg-black/70 backdrop-blur-sm flex items-center justify-center p-4">
+        <div class="bg-white rounded-3xl max-w-2xl w-full max-h-[90vh] overflow-y-auto p-6 sm:p-8 relative text-gray-800">
+            <button onclick="closeModal()" class="absolute top-4 right-4 w-10 h-10 rounded-full bg-gray-100 hover:bg-gray-200 text-gray-600 flex items-center justify-center text-lg transition">
+                <i class="fas fa-times"></i>
+            </button>
+            <div id="modal-body">
+                <!-- Content inserted dynamically -->
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript Interactivity -->
+    <script>
+        // Data Paket Detail
+        const packageDetails = {
+            intimate: {
+                title: "Paket Intimate (150 Pax / 300 Porsi)",
+                price: "Rp 35.000.000",
+                sections: [
+                    { title: "Dekorasi", items: ["Pelaminan modern / gebyok 5m", "Taman standar dekorasi", "Pergola & Welcome Sign", "Karpet Jalan", "Standing Flower", "Tenda dekorasi 80m (untuk acara rumah)", "Kursi futura + cover 70 buah", "1 buah meja & buku tamu", "1 buah Standing angpao", "1 buah blower"] },
+                    { title: "Makeup & Busana", items: ["Makeup & Touch up (1x)", "1 pasang busana pengantin + aksesoris", "2 pasang busana ortu + makeup Ibu + Aksesoris", "2 buah busana penerima tamu + makeup", "Free melati akad"] },
+                    { title: "Catering", items: ["1 Jalur Meja Buffet", "6 Roll top + Sendok service + toples kerupuk", "300 piring + sendok + garpu", "Buffet Utama 300 Porsi (Menu A)"] },
+                    { title: "Stall Jajanan", items: ["Dimsum 80 porsi", "Bakso 80 porsi"] },
+                    { title: "Dokumentasi", items: ["Fotografer & Videografer", "Album Kolase 10 sheet", "Master Foto Google Drive", "Video Sinematik & Video prosesi"] },
+                    { title: "Free Package & Bonus", items: ["Tirai 18m", "Cetak foto album 35x45 & Frame foto 40x50", "1 Janur besar", "Free Waiter", "Buah Potong & Ice Tea"] }
+                ]
+            },
+            basic: {
+                title: "Paket Basic (500 Pax / 1000 Porsi)",
+                price: "Rp 75.000.000",
+                sections: [
+                    { title: "Dekorasi", items: ["Pelaminan modern / gebyok 5-7m (bebas pilih sesuai referensi)", "Taman dekorasi & Gazebo", "Pergola & Welcome Sign", "Karpet Jalan & Standing Flower", "Tenda dekorasi 110m (untuk acara rumah)", "Kursi futura + cover 100 buah", "2 buah meja & buku tamu", "2 buah Standing angpao & 2 blower"] },
+                    { title: "Makeup & Busana", items: ["Makeup & Touch up (2x) Pengantin", "3 pasang busana pengantin + aksesoris", "2 pasang busana ortu + makeup Ibu + Aksesoris", "4 buah busana penerima tamu + makeup", "Free melati akad"] },
+                    { title: "Catering", items: ["1 Jalur Meja Buffet", "6 Roll top + Sendok service + toples kerupuk", "1000 piring + sendok + garpu", "Buffet Utama 1000 Porsi (Nasi Putih, Nasi Goreng, Beef Teriyaki, Ikan Tuna Asam Manis, Kentang Krispy Balado)"] },
+                    { title: "Stall Jajanan", items: ["Es Doger 200 porsi", "Dimsum 200 porsi", "Bakso 200 porsi"] },
+                    { title: "Dokumentasi", items: ["Fotografer & Videografer", "Album Kolase 10 sheet", "Master Foto Flashdisk / Google Drive", "Video Sinematik & Video prosesi"] },
+                    { title: "Free Package & Bonus", items: ["Tirai 30m", "1 Janur besar & Free Waiter", "Cetak foto album 35x45 & Frame foto 40x50", "50 porsi Soto Ayam & Puding", "Buah Potong & Ice Tea"] }
+                ]
+            },
+            signature: {
+                title: "Paket Signature (700 Pax / 1400 Porsi)",
+                price: "Rp 120.000.000",
+                sections: [
+                    { title: "Dekorasi", items: ["Pelaminan modern / gebyok / drappery 5-8m", "Taman dekorasi & Gazebo", "Pergola & Welcome Sign", "Karpet Jalan & Standing Flower", "Tenda dekorasi 110m (untuk acara rumah)", "Kursi futura + cover 100 buah", "2 meja & buku tamu, 2 Standing angpao, 2 blower, Area VIP"] },
+                    { title: "Makeup & Busana", items: ["Makeup & Touch up (2x) Pengantin", "3 pasang busana pengantin + aksesoris", "2 pasang busana ortu + makeup Ibu + Aksesoris", "4 buah busana penerima tamu + makeup", "Free melati akad / adat"] },
+                    { title: "Catering", items: ["2 Jalur Meja Buffet Umum + 1 VIP", "18 Roll top + Sendok service + toples kerupuk", "1400 piring + sendok + garpu", "Buffet Utama 1400 Porsi (Pilihan Menu B / C)"] },
+                    { title: "Stall Jajanan", items: ["Zuppa Soup 200 porsi", "Dimsum 250 porsi", "Bakso 250 porsi", "Es Doger 250 porsi", "Crepes 300 porsi"] },
+                    { title: "Dokumentasi", items: ["Fotografer & Videografer", "Album Kolase 10 sheet", "Master Foto Flashdisk / Google Drive", "Video Sinematik & Video prosesi"] },
+                    { title: "Free Package & Bonus", items: ["MC Acara", "Tirai 60m", "1 Janur besar & Janur kecil", "Free Waiter", "Cetak foto album 35x45 & Frame foto 40x50", "Soto Ayam 70 porsi, Puding, Soft drink, Buah Potong, Ice Tea"] }
+                ]
+            },
+            luxury: {
+                title: "Paket Luxury (1000 Pax / 2000 Porsi)",
+                price: "Rp 155.000.000",
+                sections: [
+                    { title: "Dekorasi", items: ["Pelaminan modern / gebyok / drappery 5-8m", "Taman dekorasi & Gazebo", "Pergola & Welcome Sign", "Karpet Jalan & Standing Flower", "Tenda dekorasi 110m (untuk acara rumah)", "Kursi futura + cover 100 buah", "2 meja & buku tamu, 2 Standing angpao, 2 blower, Area VIP"] },
+                    { title: "Makeup & Busana", items: ["Makeup & Touch up (2x) Pengantin", "3 pasang busana pengantin + aksesoris", "2 pasang busana ortu + makeup Ibu + Aksesoris", "4 buah busana penerima tamu + makeup", "Free melati akad / adat"] },
+                    { title: "Catering", items: ["2 Jalur Meja Buffet Umum + 1 VIP", "18 Roll top + Sendok service + toples kerupuk", "2000 piring + sendok + garpu", "Buffet Utama 2000 Porsi (Menu B/C/D)"] },
+                    { title: "Stall Jajanan", items: ["Zuppa Soup 200 porsi", "Dimsum 250 porsi", "Bakso 250 porsi", "Crepes 300 porsi", "Es Doger 250 porsi"] },
+                    { title: "Dokumentasi", items: ["Fotografer & Videografer", "Album Kolase 10 sheet", "Master Foto Flashdisk / Google Drive", "Video Sinematik & Video prosesi"] },
+                    { title: "Free Package & Bonus", items: ["Wedding Organizer (WO)", "MC Acara", "Tirai 60m", "Free Waiter", "Soto Ayam 100 porsi, Puding, Soft drink, Buah Potong, Ice Tea"] }
+                ]
+            }
+        };
+
+        // Modal Functionality
+        function openModal(pkgKey) {
+            const data = packageDetails[pkgKey];
+            if (!data) return;
+
+            let html = `
+                <span class="text-xs font-bold text-gold-600 uppercase tracking-widest block mb-1">Rincian Paket</span>
+                <h3 class="font-serif text-2xl font-bold text-sage-900 mb-2">${data.title}</h3>
+                <p class="font-serif text-2xl font-bold text-gold-500 mb-6">${data.price}</p>
+                <div class="space-y-6">
+            `;
+
+            data.sections.forEach(sec => {
+                html += `
+                    <div class="border-t border-gray-100 pt-4">
+                        <h4 class="font-bold text-sage-800 text-sm mb-2 flex items-center gap-2">
+                            <i class="fas fa-angle-right text-gold-500"></i> ${sec.title}
+                        </h4>
+                        <ul class="text-xs text-gray-600 space-y-1.5 pl-4 list-disc">
+                            ${sec.items.map(item => `<li>${item}</li>`).join('')}
+                        </ul>
+                    </div>
+                `;
+            });
+
+            html += `
+                </div>
+                <div class="mt-8 pt-4 border-t border-gray-100 flex gap-3">
+                    <a href="https://wa.me/6285715546706?text=Halo%20Ghalda%20Catering,%20saya%20tertarik%20dengan%20${encodeURIComponent(data.title)}" target="_blank" class="flex-1 bg-gold-500 hover:bg-gold-400 text-sage-900 font-bold py-3 rounded-xl text-center text-sm transition">
+                        Konsultasi via WhatsApp
+                    </a>
+                </div>
+            `;
+
+            document.getElementById('modal-body').innerHTML = html;
+            document.getElementById('package-modal').classList.remove('hidden');
+        }
+
+        function closeModal() {
+            document.getElementById('package-modal').classList.add('hidden');
+        }
+
+        // Menu Tab Switcher
+        function switchMenu(menuKey) {
+            document.querySelectorAll('.menu-content').forEach(el => el.classList.add('hidden'));
+            document.querySelectorAll('.menu-tab-btn').forEach(btn => {
+                btn.classList.remove('bg-sage-700', 'text-white', 'shadow-md');
+                btn.classList.add('bg-white', 'text-gray-700', 'border', 'border-gray-200');
+            });
+
+            document.getElementById(`content-${menuKey}`).classList.remove('hidden');
+            const activeBtn = document.getElementById(`btn-${menuKey}`);
+            activeBtn.classList.remove('bg-white', 'text-gray-700', 'border', 'border-gray-200');
+            activeBtn.classList.add('bg-sage-700', 'text-white', 'shadow-md');
+        }
+
+        // Stall Search Filter
+        document.getElementById('stall-search')?.addEventListener('keyup', function(e) {
+            const query = e.target.value.toLowerCase();
+            document.querySelectorAll('.stall-item').forEach(item => {
+                const text = item.textContent.toLowerCase();
+                if (text.includes(query)) {
+                    item.classList.remove('hidden');
+                } else {
+                    item.classList.add('hidden');
+                }
+            });
+        });
+
+        // Mobile Menu Toggle
+        document.getElementById('menu-toggle')?.addEventListener('click', function() {
+            document.getElementById('mobile-menu').classList.toggle('hidden');
+        });
+
+        // Budget Calculator Logic
+        function calculateBudget() {
+            const type = document.getElementById('calc-type').value;
+            const groupPackage = document.getElementById('group-package');
+            const groupBuffet = document.getElementById('group-buffet');
+            
+            let total = 0;
+            let detailText = "";
+
+            if (type === 'package') {
+                groupPackage.classList.remove('hidden');
+                groupBuffet.classList.add('hidden');
+                
+                const pkgPrice = parseInt(document.getElementById('calc-package').value);
+                total += pkgPrice;
+
+                if (pkgPrice === 35000000) detailText = "Fasilitas Paket Intimate (150 pax / 300 porsi).";
+                else if (pkgPrice === 75000000) detailText = "Fasilitas Paket Basic (500 pax / 1000 porsi).";
+                else if (pkgPrice === 120000000) detailText = "Fasilitas Paket Signature (700 pax / 1400 porsi).";
+                else if (pkgPrice === 155000000) detailText = "Fasilitas Paket Luxury (1000 pax / 2000 porsi).";
+
+            } else {
+                groupPackage.classList.add('hidden');
+                groupBuffet.classList.remove('hidden');
+
+                const menuPrice = parseInt(document.getElementById('calc-menu-price').value);
+                const pax = parseInt(document.getElementById('calc-pax').value) || 0;
+                total += (menuPrice * pax);
+                detailText = `Catering Prasmanan untuk ${pax} porsi dengan set menu porsi Rp ${menuPrice.toLocaleString('id-ID')}.`;
+            }
+
+            // Additional Stall: Kambing Guling
+            const kambingQty = parseInt(document.getElementById('calc-kambing').value) || 0;
+            if (kambingQty > 0) {
+                total += (kambingQty * 1500000);
+                detailText += ` Ditambah ${kambingQty} ekor Kambing Guling.`;
+            }
+
+            const formattedTotal = "Rp " + total.toLocaleString('id-ID');
+            document.getElementById('calc-total-display').innerText = formattedTotal;
+            document.getElementById('calc-detail-text').innerText = detailText;
+
+            // WA Link
+            const waText = encodeURIComponent(`Halo Ghalda Catering, saya telah menghitung estimasi biaya di website:
+
+- Layanan: ${type === 'package' ? 'Paket Pernikahan' : 'Prasmanan Only'}
+- Perkiraan Total: ${formattedTotal}
+- Detail: ${detailText}
+
+Mohon informasi ketersediaan tanggal & jadwal konsultasi.`);
+            document.getElementById('calc-wa-btn').href = `https://wa.me/6285715546706?text=${waText}`;
+        }
+
+        // Initialize Calculator
+        calculateBudget();
+    </script>
+</body>
+</html>
